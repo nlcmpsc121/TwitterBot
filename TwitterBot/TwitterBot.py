@@ -1,12 +1,10 @@
 import tweepy
 
 # Authenticate to Twitter
-auth = tweepy.OAuthHandler("LDeMINB5gnQJUqdNCsUIUhekX", 
-    "p3kcJ6PzMpIbff0j2yaXCavFrNvAyBFT3YBfiiGWl9UVVpCutK")
-auth.set_access_token("1597108682571087883-KBkckZ0S0SU6OCyGbkGb6uv5GIyf8Y", "pWt843BiIo2PB8PvhM17YuiejxqAxOWwMVJS5HrppcdFH")
+auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
+auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
 
 api = tweepy.API(auth)
-
 
 try:
    api.verify_credentials()
@@ -14,4 +12,4 @@ try:
 except:
     print("Error during authentication")
 
-api.update_status("Hello Tweepy!")
+api.update_status("Cyber100 is a great class!")
